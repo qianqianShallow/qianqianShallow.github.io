@@ -6660,3 +6660,17 @@ input[type="checkbox"] {
   color: #222222;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; 将容器的高度设置为视口高度 */
+}
+
+.image-container img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+
