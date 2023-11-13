@@ -498,9 +498,208 @@
                     </p>
                 </div>  
             </div>
+            
+            <h4><strong> 2.Whether interaction concepts can fit human cognition well </strong> </h4>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Background</div>
+                    <p>
+                        1.We cannot mathematically model and verify what “human cognition” is. User studies and 
+                        the analysis of brainwave patterns have not yet reached the level of a rigorous system built 
+                        upon axioms and theorems. 
+
+                    </p>
+                    <p>
+                        We mathematically define the simplicity, generality, and the explanation accuracy (universal 
+                        matching ability) of interaction concepts, and theoretically prove the connection between the 
+                        interaction concept and previous theorems. However, none of these theories reflects human cognition    
+                    </p>
+                </div>  
+            </div>
+            <br>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Research: whether interaction concepts fit human cognition</div>
+                    <p>
+                        <strong> verifying salient interaction concepts usually represent prototypical 
+                        concepts in human cognition [13]</strong>, i.e., salient interaction concepts encoded by the DNN 
+                        usually represent prototypical appearances of objects. When we revise local hue/intensity/saturation
+                         of the input image based on the loss of boosting top-ranked salient interaction concepts, 
+                         the revised image usually looks more prototypical.
+
+                    </p>
+                    <p>
+                        <strong>Revisiting textural concepts and shape concepts encoded by a DNN from the perspective of interaction 
+                        concepts [14]</strong>. Specifically, we find that the modeling of textures is more flexible than the modeling of shapes. 
+                        We also find that the DNN usually encodes textures in two ways, where low-order interaction concepts represent 
+                        simple and local textures, and middle-order interactions represent more complex textures.    
+                    </p>
+                </div>  
+            </div>
+
+            <h4><strong> 3.Follow-up question: discovering new knowledge from AI models beyond human understanding </strong> </h4>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Background</div>
+                    <p>
+                        1.<strong> potential new perspective for AI for Science</strong>. When an AI model has achieved superior 
+                        performance by encoding the black-box representations, different from discovering knowledge 
+                        from data, how can we use the black-box explanations of this AI model to discover knowledge? 
+                    </p>
+                    <p>
+                        This proposes high requirements for the trustworthiness of the explanation, i.e., 
+                        the explanation is supposed to be proved by theories, be verified by experiments, 
+                        and be accountable for errors, instead of specious intuitive analysis.
+                    </p>
+                </div>  
+            </div>
+            <br>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Research: extracting knowledge encoded by the AI model beyond human understanding</div>
+                    <p>
+                        <strong> Extracting shape patterns from the AI model, which are beyond human understandings 
+                            of the Go game to teach human players [15]</strong>. Specifically, we extract shape patterns 
+                            consisting of a few stones from the value network for the Go game. Some shape patterns 
+                            enhance the advantage of the white stones, and some patterns tend to enhance the advantage
+                             of the black stones. We also cooperate with professional human players for the Go game. 
+                            Professional players have identified both shape patterns that fit common understanding 
+                            of human players and shape patterns that conflict with human understandings.
+                    </p>
+                </div>  
+            </div>
+
+
+            <h4><strong> 4.Theoretical extension 1: reformulating the representation power (robustness, generalization) of DNNs from the perspective of interaction concepts </strong> </h4>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Background</div>
+                    <p>
+                        1. Traditional theoretic bounds for the loss and the accuracy of a DNN cannot fully reflect the 
+                        complexity of knowledge representations of a DNN. Many simplifying assumptions, e.g., as shallow 
+                        depth, infinite width, smoothness of loss landscape, cannot explain detailed decision-making 
+                        behaviors of a DNN.
+                    </p>
+                    <p>
+                        2. It has been found in [3] that DNNs trained for the same task usually encode similar interaction 
+                        concepts, although different DNNs may have fully different architectures. Thus, compared to 
+                        explanation based on local network architectures and the loss, going beyond detailed structures 
+                        and analyzing the emergence of interaction concepts encoded by the entire DNN may provide a new 
+                        promising direction to explain the representation power of a DNN.
+                    </p>
+                    <p>
+                        3. We need an atomic system to ensure the faithful connection between interaction concepts 
+                        and the representation power.
+                    </p>
+                </div>  
+            </div>
+            <br>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Research: redefining and quantifying the robustness, generalizability, 
+                        and representation bottleneck of neural networks from the perspective of interaction concepts</div>
+                    <p>
+                        1. <strong>Experiments and theoretical proofs reveal an exponential analytical relationship between 
+                        the adversarial robustness of a DNN and the complexity of interaction concepts [16,17,21].</strong> 
+                        We have discovered that, compared to normally-trained DNNs, adversarailly-trained DNNs 
+                        significantly boosts the robustness of high-order (complex) interaction concepts. [16]. 
+                        We find [17] and prove [21] a negative correlation between adversarial robustness and the 
+                        complexity of interaction concepts.
+                    </p>
+                    <p>
+                        2. <strong>The relationship between the complexity of the interaction concepts and the generalization
+                         power of the neural network [18,19]</strong>. We discovered that the over-fitted samples usually 
+                         exhibit much stronger interactions than ordinary samples, and proved that the dropout 
+                         operation can improve the generalization power of the DNN by suppressing the strength of 
+                         interactions between input variables of DNNs [18]. We have discovered that the generalization 
+                         power of the simple (low-order) interaction interaction is stronger that that of the 
+                         complex (high-order) interaction interaction, and theoretically proven that the instability of 
+                         interaction concepts is positively related to the complexity of interaction concepts [19].     
+                    </p>
+                    <p>
+                        3. <strong>Proving a common representation bottleneck of neural networks – difficulty in encoding 
+                        interactions of moderate complexity [20]</strong>. Discovering and explaining a representation bottleneck 
+                        of neural networks, i.e., neural networks tend to encode extremely simple and extremely complex 
+                        interactions, but are less likely to encode interactions of moderate complexity.
+                    </p>
+                    <p>
+                        4. <strong>Proving a representation bottleneck of Bayesian neural networks (BNNs) – difficulty in encoding 
+                        complex interactions [21]</strong>. Theoretically proving that compared to standard neural networks, 
+                        it is more difficult for BNNs to encode complex high-order interactions. Besides, this conclusion 
+                        provides a potential concept-level explanation for the high adversarial robustness of BNNs [21].
+                    </p>
+                </div>  
+            </div>
+
+            <h4><strong> 5.Theoretical extension 2: modeling previous empirical algorithms within a unified mathematical framework </strong> </h4>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Background</div>
+                    <p>
+                        Many deep-learning algorithms are designed on experimental experience or intuitive understanding, 
+                        without theoretically summarizing essential factors from experimental observations
+                    </p>
+                </div>  
+            </div>
+            <br>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text"> Reaearch</div>
+                    <p>
+                        1. <strong> Theoretically reformulating and unifying different attribution methods into the system 
+                        of interactions [22] (this paper discusses, but is not limited to, 14 attribution methods). </strong> 
+                        An important direction in explainable AI is the attribution problem, i.e., given a black-box 
+                        AI model and an input sample, the goal is to infer the importance score of each specific input 
+                        variable on the prediction of the sample. However, previous attribution methods were often 
+                        designed based on different heuristics, e.g., estimating the importance score based on gradients 
+                        or occlusion, without a unified theoretical framework. Therefore, for the first time, this paper 
+                        rewrite the mathematical essence of 14 different attribution methods as the allocation of 
+                        interaction utilities. Specifically, the attribution value estimated by each method can be 
+                        represented as a specific allocation of interaction utilities to different input variables.
+
+                    </p>
+                    <p>
+                        2. <strong> Proving that reducing interaction is the common mechanism shared by different algorithms 
+                        of enhancing adversarial transferability [23]</strong>. Numerous methods have been proposed to 
+                        strengthen adversarial transferability. We prove that  thirteen methods of enhancing 
+                        adversarial transferability all reduce the game-theoretic interactions between adversarial 
+                        perturbations. Furthermore, we introduce an interaction loss,  which directly penalizes 
+                        interactions during the attack process, to enhance adversarial transferability.
+                    </p>
+                </div>  
+            </div>
+
+            <h4><strong> 6.Others: Interpretable HarsanyiNet </strong> </h4>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Background</div>
+                    <p>
+                        The Shapley value is a widely-used attribution methods with relatively solid theoretical 
+                        foundation, but its exponential computation cost O(2n) is the main challenge of applying 
+                        Shapley values to real applications.
+                    </p>
+                </div>  
+            </div>
+            <br>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text"> Reaearch</div>
+                    <p>
+                        1. <strong> Developing a novel network architecture, based on which the cost of computing exact 
+                        Shapley values is reduced from O(2n) to O(1) (using a single forward propagation) [24].</strong> 
+                        The Shapley value is a widely accepted attribuion method due to its solid mathematical 
+                        foundation, e.g., it satisfies the linearity, dummy, symmetry, and efficiency axioms. 
+                        However, one of the major challenges with Shapley values is the exponential computational cost. 
+                        Despite various approximation algorithms have been proposed recently, obtaining relatively 
+                        accurate Shapley values still requires thousands of network inferences. Therefore, 
+                        we developed a new neural network architecture, which can compute exactly accurate Shapley 
+                        values in a single network inference.
+                    </p>
+                </div>  
+            </div>
 
             
-            <h4><strong> 2.Whether interaction concepts can fit human cognition well</strong></h4>
+            <!-- <h4><strong> 2.Whether interaction concepts can fit human cognition well</strong></h4>
             <div class="image-container">
                 <img src="img/research problems/b1.png" class="image problem research" alt="Avatar" />
             </div>
@@ -519,7 +718,7 @@
             <h4><strong> 6.Others: Interpretable HarsanyiNet</strong></h4>
             <div class="image-container">
                 <img src="img/research problems/e.png" class="image problem research" alt="Avatar" />
-            </div>
+            </div> -->
         </div>
 
     </section>
