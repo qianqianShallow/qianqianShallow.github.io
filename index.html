@@ -450,11 +450,13 @@
     </section>
 
     <!-- Research Problems -->
-    <section id="reaearch problems" class="p-5 bg-white" style="font-family:HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    <section id="reaearch problems" class="bg-white text-dark" style="font-family:HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     font-weight: 300;
     font-size: 17px;
     margin-left: auto;
-    margin-right: auto;">
+    margin-right: auto;
+    width: 80%;">
+        <div class="container margin-right: auto;margin-left: auto; margin-top: 10px;">
         <div class="h2 text-center">Research Problems</div>
         <div style="margin-right: auto;margin-left: auto; margin-top: 10px; margin-bottom: 100px; width: 70%;text-align:justify; text-justify:inter-ideograph">
             <h4><strong> 1.Fundamental question: can DNNs rigorously be explained as symbolic concepts? </strong> </h4>
@@ -498,7 +500,80 @@
                     </p>
                 </div>  
             </div>
+            <br>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Research: proving and verifying the symbolic representation of deep neural networks</div>
+                    <p>
+                        1.<strong> Proving the conciseness (sparsity) of interaction concepts, as primitive inference patterns encoded by a DNN.</strong> 
+                        It has been theoretically proved that under three common conditions for an AI model, an occlusion-robust AI model 
+                        only uses a small number of interaction concepts, as the primitive inference patterns for the classification of 
+                        an input sample
+                    </p>
+                    <p>
+                        2.<strong> Mathematically guaranteeing the faithfulness (universal approximation ability) of interaction 
+                        concepts.</strong> Given an input sample with n variables, the inference score of a DNN on this sample 
+                        can always be disentangled into numerical effects of only a few interaction concepts, no matter 
+                        how the input sample is randomly masked. Empirically, a graph with 100 interaction 
+                        concepts (nodes) is sufficient to mimic the DNN’s inference scores on 2n different masked samples.
+     
+                    </p>
+                    <p>
+                        3.<strong> Generalization power of interaction concepts [3]</strong>. It is discovered that each salient interaction 
+                        concept exhibits high transferability 1. over different samples and 2. across different DNNs 
+                        trained for the same task. It means that although different DNNs have dramatically different 
+                        architectures, DNNs for the same task usually learn similar interaction concepts, which makes 
+                        the interaction concept a more essential explanation metric beyond the network architecture.
+
+                    </p>
+                    <p>
+                        4.<strong> Discrimination power of interaction concepts [3]</strong>. It has been verified that the interaction 
+                        concepts exhibit certain discrimination power in the classification task.
+                    </p>
+                    <p>
+                        5.<strong> Dense connections to existing XAI methods/metrics [2]</strong>. The interaction concept is proved to 
+                        explain the elementary mechanism of some XAI metrics, e.g., Shapley value, Shapley interaction index, and 
+                        Shapley-Taylor interaction index.
+                    </p>
+                </div>  
+            </div>
+            <br>
+            <div class="text-container">
+                <div class="rounded-rectangle-background">
+                    <div class="label-text">Research: proving and verifying the symbolic representation of deep neural networks</div>
+                    <p>
+                        1.<strong> Defining multi-order interactions [4,5,6]</strong>. We define the game-theoretic interaction metric 
+                            for the interactions between input variables of different complexity orders.
+                    </p>
+                    <p>
+                        2.<strong> Extracting the common interactions among different models [7]</strong>. Given different models trained on the same 
+                            task, we define and extract common interaction concepts shared by different models. Empirically, extracting 
+                            common knowledge/interactions shared by different models can improve generalization power of the interaction concept.
+     
+                    </p>
+                    <p>
+                        3.<strong> Extracting the robust interactions under noises [8]</strong>. Interactions extracted by existing methods are usually vulnerable 
+                            to small noisy perturbations on the input. We propose a method to extract common interaction concepts that are robust 
+                            to noises/perturbations in the input.
+                    </p>
+                    <p>
+                        4.<strong> Visualizing the dynamics of interaction concepts throughout the training of the DNN [9]</strong>.
+                    </p>
+                    <p>
+                        5.<strong> Defining and comparing interaction concepts encoded in features at different layers of the DNN [10]</strong>.
+                    </p>
+                    <p>
+                        6.<strong> Defining the optimal masking strategy in explanation methods, from the perspective of interaction concepts [11].</strong>.
+                    </p>
+                    <p>
+                        7.<strong> Explaining the LLM based on interaction concepts [12]. </strong>.
+                    </p>
+                </div>  
+            </div>
             
+            <br>
+            <br>
+
             <h4><strong> 2.Whether interaction concepts can fit human cognition well </strong> </h4>
             <div class="text-container">
                 <div class="rounded-rectangle-background">
@@ -537,6 +612,9 @@
                 </div>  
             </div>
 
+            <br>
+            <br>
+
             <h4><strong> 3.Follow-up question: discovering new knowledge from AI models beyond human understanding </strong> </h4>
             <div class="text-container">
                 <div class="rounded-rectangle-background">
@@ -569,6 +647,8 @@
                 </div>  
             </div>
 
+            <br>
+            <br>
 
             <h4><strong> 4.Theoretical extension 1: reformulating the representation power (robustness, generalization) of DNNs from the perspective of interaction concepts </strong> </h4>
             <div class="text-container">
@@ -631,6 +711,9 @@
                 </div>  
             </div>
 
+            <br>
+            <br>
+
             <h4><strong> 5.Theoretical extension 2: modeling previous empirical algorithms within a unified mathematical framework </strong> </h4>
             <div class="text-container">
                 <div class="rounded-rectangle-background">
@@ -669,6 +752,9 @@
                 </div>  
             </div>
 
+            <br>
+            <br>
+
             <h4><strong> 6.Others: Interpretable HarsanyiNet </strong> </h4>
             <div class="text-container">
                 <div class="rounded-rectangle-background">
@@ -686,7 +772,7 @@
                     <div class="label-text"> Reaearch</div>
                     <p>
                         1. <strong> Developing a novel network architecture, based on which the cost of computing exact 
-                        Shapley values is reduced from O(2n) to O(1) (using a single forward propagation) [24].</strong> 
+                        Shapley values is reduced from O(2^n) to O(1) (using a single forward propagation) [24].</strong> 
                         The Shapley value is a widely accepted attribuion method due to its solid mathematical 
                         foundation, e.g., it satisfies the linearity, dummy, symmetry, and efficiency axioms. 
                         However, one of the major challenges with Shapley values is the exponential computational cost. 
@@ -697,6 +783,41 @@
                     </p>
                 </div>  
             </div>
+
+            <h4><strong> References </strong> </h4>
+            <div class="references">
+                <ul>
+                    <li>[1] Qihan Ren, Jiayang Gao, Wen Shen, and Quanshi Zhang. Where We Have Arrived in Proving the Emergence of Sparse Symbolic Concepts in AI Models. in arXiv:2305.01939.</li>
+                    <li>[2] Jie Ren, Mingjie Li, Qirui Chen, Huiqi Deng, and Quanshi Zhang. Defining and Quantifying the Emergence of Sparse Concepts in DNNs. in CVPR 2023</li>
+                    <li>[3] Mingjie Li, and Quanshi Zhang. Does a Neural Network Really Encode Symbolic Concept? in ICML, 2023</li>
+                    <li>[4] Hao Zhang, Sen Li, Yinchao Ma, Mingjie Li, Yichen Xie, Quanshi Zhang. Interpreting and Boosting Dropout from a Game-Theoretic View. In ICLR 2021.</li>
+                    <li>[5]Hao Zhang, Yichen Xie, Longjie Zheng, Die Zhang, and Quanshi Zhang. Interpreting Multivariate Shapley Interactions in DNNs, In AAAI 2021.</li>
+                    <li>[6]Die Zhang, Huilin Zhou, Hao Zhang, Xiaoyi Bao, Da Huo, Ruizhao Chen, Xu Cheng, Mengyue Wu, and Quanshi Zhang. Building Interpretable Interaction Trees for Deep NLP Models. In AAAI 2021.</li>
+                    <li>[7]Lu Chen, Siyu Lou, Benhao Huang, and Quanshi Zhang. Defining and extracting generalizable interaction primitives from DNNs. in arXiv: ???</li>
+                    <li>[8]Jie Ren, Muyan Weng, and Quanshi Zhang. Extracting Robust On-manifold Interactions Encoded by Neural Networks. in arXiv: ???
+                    <li>[9]Jie Ren, Xinhao Zheng, Jiyu Liu, and Quanshi Zhang. Visualizing the Emergence of Primitive Interactions During the Training of DNNS. in arXiv: ???</li>
+                    <li>[10]Xu Cheng, Lei Cheng, Zhaoran Peng, and Quanshi Zhang, Tracking the Change of Knowledge Through Layers in Neural Networks</li>
+                    <li>[11]Jie Ren, Zhanpeng Zhou, Qirui Chen, and Quanshi Zhang. Can We Faithfully Represent Masked States to Compute Shapley Values on a DNN? In ICLR 2023.</li>
+                    <li>[12]Shen et al. Can the Inference Logic of Large Language Models be Disentangled into Symbolic Concepts? in arXiv:2304.01083, 2023.</li>
+                    <li>[13]Xu Cheng, Xin Wang, Haotian Xue, Zhengyang Liang, and Quanshi Zhang, “Do Game-Theoretic Interactions Really Reflect Prototypical Concepts in DNNs?”arXiv preprint arXiv:2108.02646.</li>
+                    <li>[14]Quanshi Zhang*, Xu Cheng*, Chuntung Chu, Yi Zheng, Jie Ren, Jinpeng Zhang, and Hao Zhang, “Formulating and Analyzing How a DNN Encodes Visual Concepts from the Interaction Perspective,” arXiv preprint arXiv:2106.10938</li>
+                    <li>[15]Huilin Zhou, Huijie Tang, Mingjie Li, Hao Zhang, Zhenyu Liu, Quanshi Zhang. Explaining how a neural network play the go game and let people learn. in arXiv:2310.09838</li>
+                    <li>[16]Xin Wang, Shuyun Lin, Hao Zhang, Yufei Zhu, and Quanshi Zhang. Interpreting Attributions and Interactions of Adversarial Attacks. In ICCV 2021.</li>
+                    <li>[17]Jie Ren, Die Zhang, Yisen Wang, Lu Chen, Zhanpeng Zhou, Yiting Chen, Xu Cheng, Xin Wang, Meng Zhou, Jie Shi, and Quanshi Zhang. A Unified Game-Theoretic Interpretation of Adversarial Robustness. In NeurIPs 2021.</li>
+                    <li>[18]Hao Zhang, Sen Li, Yinchao Ma, Mingjie Li, Yichen Xie, and Quanshi Zhang. Interpreting and boosting dropout from a game-theoretic view. In ICLR, 2021.</li>
+                    <li>[19]Huilin Zhou, Hao Zhang, Huiqi Deng, Dongrui Liu, Wen Shen, Shih-Han Chan, and Quanshi Zhang. Concept-level explanation for the generalization of a dnn. arXiv preprint arXiv:2302.13091, 2023.</li>
+                    <li>[20]Huiqi Deng, Qihan Ren, Xu Chen, Hao Zhang, Jie Ren, and Quanshi Zhang. Discovering and Explaining the Representation Bottleneck of DNNs. ICLR, 2021.</li>
+                    <li>[21]Qihan Ren, Huiqi Deng, Yunuo Chen, Siyu Lou, and Quanshi Zhang. Bayesian Neural Networks Avoid Encoding Complex and Perturbation-Sensitive Concepts. ICML, 2023.</li>
+                    <li>[22] Huiqi Deng, Na Zou, Mengnan Du, Weifu Chen, Guocan Feng, Ziwei Yang, Zheyang Li, and Quanshi Zhang. Unifying Fourteen Post-Hoc Attribution Methods with Taylor Interactions, arXiv:2303.01506, 2023</li>
+                    <li>[23]Zhang, Quanshi, Wang, Xin, Ren, Jie, Cheng, Xu, Lin, Shuyun., Wang, Yisen, & Zhu, Xiangming (2022). Proving common mechanisms shared by twelve methods of boosting adversarial transferability. arXiv preprint arXiv:2207.11694.</li>
+                    <li>[24]Lu Chen, Siyu Lou, Keyan Zhang, Jin Huang, and Quanshi Zhang. Harsanyinet: Computing accurate shapley values in a single forward propagation. In International Conference on Machine Learning, 2023.</li>
+                    <li>[25] Dongrui Liu, Huiqi Deng, Xu Cheng, Qihan Ren, Kangrui Wang, Quanshi Zhang. Towards the Difficulty for a Deep Neural Network to Learn Concepts of Different Complexities, in NeurIPS 20232.</li>
+                    <li>[26] Wen Shen, Qihan Ren, Dongrui Liu, and Quanshi Zhang. Interpreting Representation Quality of DNNs for 3D Point Cloud Processing. Neurips, 2021</li>
+                    <li>[27] Xin Wang, Jie Ren, Shuyun Lin, Xiangming Zhu, Yisen Wang, Quanshi Zhang. A Unified Approach to Interpreting and Boosting Adversarial Transferability, in ICLR, 2021</li>
+                </ul>
+            </div>
+
+            
 
             
             <!-- <h4><strong> 2.Whether interaction concepts can fit human cognition well</strong></h4>
