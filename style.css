@@ -6682,7 +6682,7 @@ input[type="checkbox"] {
 
 .rounded-rectangle-background {
   background: #87CEFA; /* 背景颜色设置为灰色 */
-  width: 900px; /* 调整矩形的宽度 */
+  width: 1000px; /* 调整矩形的宽度 */
   border-top-left-radius: 20px; /* 左上角圆角 */
   border-bottom-right-radius: 20px; /* 右下角圆角 */
   padding: 20px;
