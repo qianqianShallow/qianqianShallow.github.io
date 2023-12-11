@@ -6680,16 +6680,30 @@ input[type="checkbox"] {
   width: 70%
 }
 
+
 .rounded-rectangle-background {
-  background: HSL(150, 100%, 80%); /* 背景颜色设置为灰色 */
-  width: 1200px; /* 调整矩形的宽度 */
-  border-top-left-radius: 20px; /* 左上角圆角 */
-  border-bottom-right-radius: 20px; /* 右下角圆角 */
+  border: 2px solid black;
+  width: 120%; /* 使用百分比来实现大小随页面变化 */
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   padding: 20px;
+  margin: auto; /* 使用 margin: auto; 来使容器水平居中 */
+  /* box-sizing: border-box; 让 padding 不会增加容器的实际宽度 */
   display: block;
   justify-content: center;
   align-items: center;
 }
+
+/* .rounded-rectangle-background {
+  background: HSL(150, 100%, 80%); /* 背景颜色设置为灰色 */
+  /*width: 1200px; /* 调整矩形的宽度 */
+  /*border-top-left-radius: 20px; /* 左上角圆角 */
+  /*border-bottom-right-radius: 20px; /* 右下角圆角 */
+  /*padding: 20px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+} */
 
 
 .label-text {
