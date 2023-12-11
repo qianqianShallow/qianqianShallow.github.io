@@ -6683,7 +6683,7 @@ input[type="checkbox"] {
 
 .rounded-rectangle-background {
   border: 2px solid black;
-  width: 120%; /* 使用百分比来实现大小随页面变化 */
+  width: 150%; /* 使用百分比来实现大小随页面变化 */
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 20px;
