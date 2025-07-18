@@ -17,25 +17,30 @@ My research interests lie in **Explainable artificial intelligence**, with a par
 
 **Towards the Dynamics of a DNN Learning Symbolic Interactions** [[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/5aa96d1caa0d0b99d534b67df06be2ff-Abstract-Conference.html)&nbsp;|&nbsp;[知乎](https://zhuanlan.zhihu.com/p/711281443)&nbsp;|&nbsp;[机器之心](https://mp.weixin.qq.com/s/MEzYIk2Ztll6fr1gyZUQXg)]  
 Qihan Ren<sup>*</sup>, **Junpeng Zhang<sup>*</sup>**, Yang Xu, Yue Xin, Dongrui Liu, Quanshi Zhang
+<br>
 Neurips, 2024
 
 
 **Two-Phase Dynamics of Interactions Explains the Starting Point of a DNN Learning Over-Fitted Features** [[paper](https://arxiv.org/abs/2405.10262)&nbsp;|&nbsp;[知乎](https://zhuanlan.zhihu.com/p/711281443)&nbsp;|&nbsp;[机器之心](https://mp.weixin.qq.com/s/MEzYIk2Ztll6fr1gyZUQXg)]  
 **Junpeng Zhang**, Qing Li, Liang Lin, Quanshi Zhang
+<br>
 Preprint, 2024
 
 
 **Randomness of Low-Layer Parameters Determines Confusing Samples in Terms of Interaction Representations of a DNN** [[paper](https://arxiv.org/abs/2502.08625)&nbsp;|&nbsp;[知乎](https://zhuanlan.zhihu.com/p/711281443)&nbsp;|&nbsp;[机器之心](https://mp.weixin.qq.com/s/MEzYIk2Ztll6fr1gyZUQXg)]  
 **Junpeng Zhang**, Lei Cheng, Qing Li, Liang Lin, Quanshi Zhang
+<br>
 Preprint, 2025
 
 
 **Technical Report: Quantifying and Analyzing the Generalization Power of a DNN** [[paper](https://arxiv.org/abs/2505.06993)]  
 Yuxuan He<sup>*</sup>, **Junpeng Zhang<sup>*</sup>**, Lei Cheng, Hongyuan Zhang, Quanshi Zhang
+<br>
 Preprint, 2025
 
 
 **Revisiting Generalization Power of a DNN in Terms of Symbolic Interactions** [[paper](https://arxiv.org/abs/2502.10162)]  
 Lei Cheng, **Junpeng Zhang**, Qihan Ren, Quanshi Zhang
+<br>
 Preprint, 2025
 
