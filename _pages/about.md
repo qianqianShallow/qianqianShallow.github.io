@@ -27,7 +27,7 @@ Neurips, 2024
 Preprint, 2024
 
 
-**Randomness of Low-Layer Parameters Determines Confusing Samples in Terms of Interaction Representations of a DNN** [[paper](https://arxiv.org/abs/2502.08625)&nbsp;|&nbsp;[知乎](https://zhuanlan.zhihu.com/p/711281443)&nbsp;|&nbsp;[机器之心](https://mp.weixin.qq.com/s/MEzYIk2Ztll6fr1gyZUQXg)]  
+**Randomness of Low-Layer Parameters Determines Confusing Samples in Terms of Interaction Representations of a DNN** [[paper](https://arxiv.org/abs/2502.08625)]  
 **Junpeng Zhang**, Lei Cheng, Qing Li, Liang Lin, Quanshi Zhang
 <br>
 Preprint, 2025
@@ -39,7 +39,7 @@ Yuxuan He<sup>*</sup>, **Junpeng Zhang<sup>*</sup>**, Lei Cheng, Hongyuan Zhang,
 Preprint, 2025
 
 
-**Revisiting Generalization Power of a DNN in Terms of Symbolic Interactions** [[paper](https://arxiv.org/abs/2502.10162)]  
+**Revisiting Generalization Power of a DNN in Terms of Symbolic Interactions** [[paper](https://arxiv.org/abs/2502.10162)&nbsp;|&nbsp;[机器之心](https://mp.weixin.qq.com/s/qhOqtiwnDNQhn7AWASEOJw?poc_token=HG90emijqonay4dZnsX7OB0UBaePjRv_OaoX4kaX)]  
 Lei Cheng, **Junpeng Zhang**, Qihan Ren, Quanshi Zhang
 <br>
 Preprint, 2025
