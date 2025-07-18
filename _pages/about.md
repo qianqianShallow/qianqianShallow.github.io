@@ -31,7 +31,7 @@ Preprint, 2025
 
 
 **Technical Report: Quantifying and Analyzing the Generalization Power of a DNN** [[paper](https://arxiv.org/abs/2505.06993)]  
-Yuxuan He*</sup>, **Junpeng Zhang**<sup>*</sup>, Lei Cheng, Hongyuan Zhang, Quanshi Zhang
+Yuxuan He<sup>*</sup>, **Junpeng Zhang<sup>*</sup>**, Lei Cheng, Hongyuan Zhang, Quanshi Zhang
 Preprint, 2025
 
 
