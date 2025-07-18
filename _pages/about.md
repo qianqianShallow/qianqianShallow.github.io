@@ -16,9 +16,10 @@ My research interests lie in **Explainable artificial intelligence**, with a par
 (* means equal contribution)
 
 **Towards the Dynamics of a DNN Learning Symbolic Interactions**  
-[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/5aa96d1caa0d0b99d534b67df06be2ff-Abstract-Conference.html) | [知乎](https://zhuanlan.zhihu.com/p/711281443) | [机器之心](https://mp.weixin.qq.com/s/MEzYIk2Ztll6fr1gyZUQXg)  
+[**[paper&nbsp;|&nbsp;知乎&nbsp;|&nbsp;机器之心]**](https://proceedings.neurips.cc/paper_files/paper/2024/hash/5aa96d1caa0d0b99d534b67df06be2ff-Abstract-Conference.html)  
 <br>
-Qihan Ren*, Junpeng Zhang*, Yang Xu, Yue Xin, Dongrui Liu, Quanshi Zhang
+Qihan Ren<sup>*</sup>, Junpeng Zhang<sup>*</sup>, Yang Xu, Yue Xin, Dongrui Liu, Quanshi Zhang
+
 
 
 
