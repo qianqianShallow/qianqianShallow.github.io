@@ -28,6 +28,7 @@ Preprint, 2024
 
 
 **Interaction Consistency Effectively Removes Non-Generalizable Representations from DNNs**
+<br>
 **Junpeng Zhang**, Qing Li, Liang Lin, Quanshi Zhang
 <br>
 Preprint, 2025
