@@ -1,11 +1,18 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Biography and Research Interests"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+## Junpeng Zhang
+
+I am currently a first-year Ph.D. student in the School of Computer Science at Shanghai Jiao Tong University (SJTU), advised by [Prof. Quanshi Zhang](http://qszhang.com). Prior to that, I received my Bachelor's degree from the School of Software Engineering at Sun Yat-sen University.
+
+My research interests lie in **Explainable artificial intelligence**, with a particular focus on understanding the decision-making logic behind neural network outputs. I believe that developing reliable explanations for neural networks can open up these “black-box” models and accelerate the deployment and development of trustworthy AI.
+
 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 
