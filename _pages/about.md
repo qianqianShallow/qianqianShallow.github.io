@@ -27,8 +27,14 @@ Neurips, 2024
 Preprint, 2024
 
 
+**Interaction Consistency Effectively Removes Non-Generalizable Representations from DNNs**
+**Junpeng Zhang**, Qing Li, Liang Lin, Quanshi Zhang
+<br>
+Preprint, 2025
+
+
 **Randomness of Low-Layer Parameters Determines Confusing Samples in Terms of Interaction Representations of a DNN** [[paper](https://arxiv.org/abs/2502.08625)]  
-**Junpeng Zhang**, Lei Cheng, Qing Li, Liang Lin, Quanshi Zhang
+**Junpeng Zhang**, Lei Cheng, Qihan Ren, Qing Li, Liang Lin, Quanshi Zhang
 <br>
 Preprint, 2025
 
@@ -43,4 +49,16 @@ Preprint, 2025
 Lei Cheng, **Junpeng Zhang**, Qihan Ren, Quanshi Zhang
 <br>
 Preprint, 2025
+
+
+
+## Selected Awards
+* [2021] First Prize, ACM Beginner Contest, Sun Yat-sen University  
+* [2022] Third Prize, Guangdong Province Mathematical Modeling Contest  
+* [2022] First-class Scholarship for Outstanding Students, Sun Yat-sen University  
+* [2022] Second Prize, ACM School-level Contest, Sun Yat-sen University
+* [2022] Outstanding Youth League Member (School-level), Sun Yat-sen University  
+* [2023] Zhaolian Financial Scholarship  
+* [2023] First-class Scholarship for Outstanding Students, Sun Yat-sen University  
+* [2023] Jindao Financial Scholarship  
 
