@@ -25,11 +25,11 @@ author:
   avatar           : "profile.png"
   name             : "Junpeng Zhang"
   # pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "zhangjp63@sjtu.edu.cn"
   location         : "Earth"
   employer         : "Shanghai Jiao Tong University"
   uri              : # URL
-  email            : "zhangjp63 [AT] sjtu.edu.cn" 
+  # email            : "zhangjp63 [AT] sjtu.edu.cn" 
 
   # Academic websites
   # academia         : # URL
