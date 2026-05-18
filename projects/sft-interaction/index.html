@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reconciling Contradictory Views on the Effectiveness of SFT in LLMs</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d6678;
+      --soft: #eef2f8;
+      --line: #dbe3ef;
+      --panel: #ffffff;
+      --panel-subtle: #f7f9fc;
+      --navy: #14213d;
+      --teal: #0f766e;
+      --gold: #b7791f;
+      --rose: #be445a;
+      --shadow: 0 18px 45px rgba(20, 33, 61, 0.09);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 340px),
+        #ffffff;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1080px;
+      margin: auto;
+      padding: 42px 24px 64px;
+    }
+    .hero {
+      text-align: center;
+      padding: 72px 0 34px;
+      position: relative;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.84);
+      color: var(--teal);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.55rem);
+      line-height: 1.15;
+      margin: 0 auto 18px;
+      max-width: 1000px;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 790px;
+      margin: 0 auto 28px;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .buttons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 24px rgba(20, 33, 61, 0.18);
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+    .buttons a.secondary {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--navy);
+      border-color: var(--line);
+      box-shadow: none;
+    }
+    .buttons a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(20, 33, 61, 0.18);
+    }
+    section {
+      margin-top: 58px;
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: clamp(1.55rem, 3vw, 2rem);
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      letter-spacing: 0;
+    }
+    h2 .section-icon,
+    .card-icon,
+    .method-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      border-radius: 8px;
+      background: var(--soft);
+      color: var(--teal);
+    }
+    .overview-panel,
+    .method-panel {
+      display: grid;
+      gap: 24px;
+      align-items: center;
+    }
+    .overview-panel {
+      grid-template-columns: 1fr;
+    }
+    .overview-panel img {
+      width: 100%;
+    }
+    .overview-copy {
+      width: 100%;
+    }
+    .overview-copy,
+    .method-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow);
+    }
+    .overview-copy {
+      padding: 24px;
+    }
+    .overview-copy p,
+    .method-panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .stat-strip.two-stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .stat {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel-subtle);
+      text-align: left;
+    }
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .cards:has(.card:nth-child(2):last-child) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      background: var(--panel);
+      box-shadow: 0 12px 30px rgba(20, 33, 61, 0.07);
+      transition: transform 180ms ease, border-color 180ms ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #b9c8da;
+    }
+    .card h3 {
+      margin: 16px 0 8px;
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .card:nth-child(2) .card-icon {
+      color: var(--gold);
+    }
+    .card:nth-child(3) .card-icon {
+      color: var(--rose);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+    }
+    .figure-stack {
+      display: grid;
+      gap: 28px;
+    }
+    .figure-panel {
+      display: grid;
+      gap: 14px;
+    }
+    .figure-panel img {
+      width: 100%;
+    }
+    .figure-caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+    .method-panel {
+      grid-template-columns: auto 1fr;
+      padding: 24px;
+    }
+    pre {
+      background: #111827;
+      color: #e5edf7;
+      padding: 18px;
+      border-radius: 8px;
+      overflow-x: auto;
+      border: 1px solid #263244;
+    }
+    .icon {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .icon-lg {
+      width: 22px;
+      height: 22px;
+    }
+    @media (max-width: 760px) {
+      .container {
+        padding: 28px 18px 48px;
+      }
+      .hero {
+        padding-top: 42px;
+      }
+      .overview-panel,
+      .method-panel {
+        grid-template-columns: 1fr;
+      }
+      .stat-strip {
+        grid-template-columns: 1fr;
+      }
+      .stat-strip.two-stats,
+      .cards:has(.card:nth-child(2):last-child) {
+        grid-template-columns: 1fr;
+      }
+      h2 {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="icon-sparkles" viewBox="0 0 24 24">
+      <path d="M9.9 3.2 8.7 7.1 5 8.5l3.7 1.4 1.2 3.9 1.2-3.9 3.7-1.4-3.7-1.4-1.2-3.9Z" />
+      <path d="M17.5 12.5 16.7 15l-2.3.9 2.3.9.8 2.5.8-2.5 2.3-.9-2.3-.9-.8-2.5Z" />
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+      <path d="M14 2v6h6" />
+      <path d="M9 13h6" />
+      <path d="M9 17h4" />
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24">
+      <path d="m16 18 6-6-6-6" />
+      <path d="m8 6-6 6 6 6" />
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
+    </symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24">
+      <rect width="14" height="14" x="8" y="8" rx="2" />
+      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+    </symbol>
+    <symbol id="icon-network" viewBox="0 0 24 24">
+      <circle cx="6" cy="6" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <circle cx="12" cy="18" r="3" />
+      <path d="m8.6 7.8 2.8 7.4" />
+      <path d="m15.4 7.8-2.8 7.4" />
+    </symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 6v6l4 2" />
+    </symbol>
+    <symbol id="icon-layers" viewBox="0 0 24 24">
+      <path d="m12 2 10 5-10 5L2 7l10-5Z" />
+      <path d="m2 17 10 5 10-5" />
+      <path d="m2 12 10 5 10-5" />
+    </symbol>
+    <symbol id="icon-activity" viewBox="0 0 24 24">
+      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+    </symbol>
+    <symbol id="icon-git" viewBox="0 0 24 24">
+      <circle cx="18" cy="18" r="3" />
+      <circle cx="6" cy="6" r="3" />
+      <circle cx="6" cy="18" r="3" />
+      <path d="M6 9v6" />
+      <path d="M8.1 8.1 15.9 15.9" />
+    </symbol>
+  </svg>
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">
+        <svg class="icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
+        SFT Interaction Analysis
+      </div>
+      <h1>Reconciling Contradictory Views on the Effectiveness of SFT in LLMs</h1>
+      <p class="subtitle">
+        An interaction-based perspective explaining why SFT can help LLMs briefly
+        through denoising, but may later introduce overfitted interaction patterns.
+      </p>
+      <div class="buttons">
+        <a href="paper.pdf"><svg class="icon" aria-hidden="true"><use href="#icon-file"></use></svg>Paper</a>
+        <a class="secondary" href="#"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a>
+        <a class="secondary" href="#"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg>Supplementary</a>
+        <a class="secondary" href="#citation"><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg>BibTeX</a>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="section-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-network"></use></svg></span>Overview</h2>
+      <div class="overview-panel">
+        <img src="assets/figure1.svg" alt="Overview of interaction evolution during SFT" />
+        <div class="overview-copy">
+          <p>
+            This work studies why supervised fine-tuning can be effective in some LLM settings
+            but inconsistent or even harmful in others. We analyze the evolution of interactions between input variables during SFT.
+          </p>
+          <div class="stat-strip two-stats" aria-label="Research summary">
+            <div class="stat">
+              <strong>Brief denoising</strong>
+              <span>SFT removes noise-like interactions only in a short early stage</span>
+            </div>
+            <div class="stat">
+              <strong>Long overfitting</strong>
+              <span>Continued fine-tuning learns numerous overfitted patterns</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="section-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-target"></use></svg></span>Key Findings</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-network"></use></svg></div>
+          <h3>SFT mainly removes noise-like interactions</h3>
+          <p>LLMs rarely learn reliable new interactions during SFT; the dominant effect is removing noise-like interaction patterns already present in the model.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-layers"></use></svg></div>
+          <h3>The denoising stage is extremely brief</h3>
+          <p>After this short useful stage, continued fine-tuning leads the model to learn numerous overfitted interaction patterns.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="section-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-activity"></use></svg></span>Interaction Evolution</h2>
+      <div class="figure-stack">
+        <figure class="figure-panel">
+          <img src="assets/figure2.svg" alt="Distribution changes of removed, newly emerged, and preserved interactions during SFT" />
+          <figcaption class="figure-caption">
+            Distribution shifts of removed, newly emerged, and preserved interactions during SFT.
+          </figcaption>
+        </figure>
+        <figure class="figure-panel">
+          <img src="assets/figure3.svg" alt="Representation quality changes of removed, newly emerged, and preserved interactions during SFT" />
+          <figcaption class="figure-caption">
+            Representation quality changes of removed, newly emerged, and preserved interactions during SFT.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="section-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-git"></use></svg></span>Method</h2>
+      <div class="method-panel">
+        <div class="method-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-git"></use></svg></div>
+        <p>
+          AND-OR interactions are widely regarded as primitive inference patterns encoded by LLMs.
+          We therefore track the distribution changes of removed, newly emerged, and preserved interactions,
+          as well as changes in their representation quality, to examine the gains and losses in LLM
+          representations throughout SFT.
+        </p>
+      </div>
+    </section>
+
+    <section id="citation">
+      <h2><span class="section-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-copy"></use></svg></span>Citation</h2>
+      <pre><code>???</code></pre>
+    </section>
+  </main>
+</body>
+</html>
